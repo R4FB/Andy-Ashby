@@ -25,7 +25,7 @@ p2021z <- zPit(p2021) # Create z-scores based on the data in p2021 and save it i
 View(p2021z) # View newly created z-scores
 
 # Take a subset of our data, order it according to z-score, and display it using datatable from the DT package
-p2021z %>% # %>% is the magritt pipe. It sends what precedes it to be executed by what follows it.
+p2021z %>% # %>% is the magrittr pipe. It sends what precedes it to be executed by what follows it.
   select(Name, Team, IP, W, SO, SV, ERA, WHIP, # pick the columns we want to keep
          zW, zSO, zSV, zERA, zWHIP, zPit) %>%
   arrange(desc(zPit)) %>% # order data set in descending order by zPit column
